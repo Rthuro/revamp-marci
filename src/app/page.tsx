@@ -1,9 +1,13 @@
-import Image from "next/image";
+import { BaitSection } from "./components/BaitSection";
+import { HeroSection } from "./components/HeroSection";
+import { SecondSection } from "./components/SecondSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      
+    <div className="flex flex-col items-center justify-center gap-12 w-full">
+      <HeroSection />
+      <SecondSection />
+      <BaitSection />
     </div>
   );
 }
