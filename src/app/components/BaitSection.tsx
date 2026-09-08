@@ -48,8 +48,8 @@ export function BaitSection() {
 
     return <section className="w-full mt-1.5-12 h-fit">
         <motion.div 
-        initial={{ width: "0%" }}
-        whileInView={{ width: "100%" }}
+        initial={{opacity:0, width: "0%" }}
+        whileInView={{ opacity: 1, width: "100%" }}
         transition={{
             duration: 1,
             ease: "easeOut",
