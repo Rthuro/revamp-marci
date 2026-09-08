@@ -27,7 +27,7 @@ export function SecondSection() {
                 </MaskedText>
             </div>
 
-            <div className="flex flex-col md:flex-row  gap-12 md:gap-0 items-center justify-around w-full">
+            <div className="flex flex-col md:flex-row  gap-18 md:gap-0 items-center justify-around w-full">
                 <TrustBuilder text="Years of Experience" number={30} />
                 <TrustBuilder text="Clients Helped Annually" number={90} />
                 <TrustBuilder text="Annual Sales" number={28.5} />

@@ -81,7 +81,7 @@ export function BaitSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
                             delay: idx * 0.2,
-                            duration: 0.6,
+                            duration: 0.8,
                             ease: "easeOut",
                         }}
                         className="relative md:flex-[0_0_450px] flex-[0_0_80%] h-[450px] rounded-xl overflow-hidden"
@@ -100,20 +100,12 @@ export function BaitSection() {
                     ))}
                 </div>
         </div>
-             <motion.button 
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                    delay: 0.2,
-                    duration: 0.6,
-                    ease: "easeOut",
-                }}
-                viewport={{ once: true }}
+             <button 
                 type="button" 
                 className="flex items-center font-epilogue gap-3  md:p-[18px_20px] p-[12px_18px] bg-primary text-sm md:text-md w-fit rounded-md text-secondary">
                     Browse more
                     <ArrowRight className="size-4 md:size-4" />
-                </motion.button>
+                </button>
         </motion.div>
         <div 
         className=" h-fit md:h-screen lg:h-fit w-full  flex justify-center items-center p-[5%]"

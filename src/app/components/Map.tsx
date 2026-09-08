@@ -33,7 +33,7 @@ export function Map(){
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="flex items-center justify-center px-6 md:px-12 w-full my-12">
-        <div className="flex flex-col md:flex-row gap-12  mx-2 md:mx-24 w-full">
+        <div className="flex flex-col md:flex-row gap-12  mx-1 md:mx-24 w-full">
             <div className="flex flex-col gap-5">
                 <h2 className="text-2xl font-cormorant font-semibold text-primarylight">
                     More Information
