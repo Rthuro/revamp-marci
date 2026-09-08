@@ -12,10 +12,10 @@ const imageLogos = [a1, a2, a3, a4]
 
 
 export function SecondSection() {
-    return <section className="flex flex-col items-center gap-12 w-full">
+    return <section className="flex flex-col items-center gap-18 w-full px-4">
 
         <div className="flex flex-col gap-3 w-full">
-            <div className="flex flex-col items-center text-3xl font-cormorant font-medium text-primarylight w-full py-14">
+            <div className="flex flex-col items-center text-2xl md:text-3xl font-cormorant font-medium text-primarylight w-full py-14 text-center">
                 <MaskedText delay={0}>
                     <p>For 2 decades, we have built lasting relationships,</p>
                 </MaskedText>
@@ -27,29 +27,15 @@ export function SecondSection() {
                 </MaskedText>
             </div>
 
-            <div className="flex items-center justify-around w-full">
+            <div className="flex flex-col md:flex-row  gap-12 md:gap-0 items-center justify-around w-full">
                 <TrustBuilder text="Years of Experience" number={30} />
                 <TrustBuilder text="Clients Helped Annually" number={90} />
                 <TrustBuilder text="Annual Sales" number={28.5} />
             </div>
         </div>
-
-       
-
-        <motion.div
-            initial={{ opacity: 0, width: "0%"}}
-            whileInView={{ opacity: 1, width: "20%"}}
-            transition={{
-                delay: 0.8,
-                duration: 0.6,
-                ease: "easeOut",
-            }}
-            className="bg-primarylight/20  h-0.5 my-6"
-        >
-        </motion.div>
         
-        <MaskedText delay={0.2}>
-            <h2 className="text-4xl font-cormorant font-medium text-primarylight uppercase">Our Affiliations</h2>
+        <MaskedText delay={0.2} viewOnce={true}>
+            <h2 className="text-3xl md:text-4xl font-cormorant font-medium text-primarylight uppercase mt-6">Our Affiliations</h2>
         </MaskedText>
 
         <LogoLoop

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Epilogue, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Footer } from "./components/Footer";
+import { Navbar } from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -30,7 +31,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${epilogue.variable} ${cormorantGaramond.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative min-h-full flex flex-col">
+        <Navbar />
         {children}
         <Footer />
       </body>

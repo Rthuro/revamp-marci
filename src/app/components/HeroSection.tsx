@@ -6,7 +6,7 @@ import gal4 from "@/app/assets/gellery/4.png"
 import gal5 from "@/app/assets/gellery/5.png"
 import gal6 from "@/app/assets/gellery/6.png"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { MaskedText } from "./MaskedText"
@@ -25,7 +25,7 @@ export function HeroSection() {
             animate={{ width: "100%", height: "100%", borderRadius: 0, margin: "0px" }}
             initial={{ width: "0%", height: "0%", borderRadius: 42, margin: "60px" }}
             transition={{ duration: 1.8, ease: "easeOut" }}
-            className="w-full h-full m-auto overflow-hidden">
+            className="w-full h-screen m-auto overflow-hidden">
             {/* {images.map((image, index) => (
                     <div key={index}>
                         <Image src={image} alt="gallery" />
@@ -44,26 +44,26 @@ export function HeroSection() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="heroOverlay absolute inset-0 p-16 flex flex-col gap-14 items-start justify-end">
-            <div className="flex flex-col gap-3 text-secondary">
-                <div className="flex flex-col font-cormorant font-medium text-6xl uppercase">
-                    <MaskedText delay={0.6}>
+            className="heroOverlay absolute inset-0 px-6 pb-12 md:p-6 flex flex-col gap-8 items-center justify-end">
+            <div className="flex flex-col gap-3 text-secondary ">
+                <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-5xl md:text-5xl uppercase text-shadow-md">
+                    <MaskedText delay={0.4}>
                         <h1>
-                            2 Decades of
+                            Two Decades of
                         </h1>
                     </MaskedText>
-                    <MaskedText delay={0.6}>
+                    <MaskedText delay={0.4}>
                         <h1 >
                             Pahrump Real
                         </h1>
                     </MaskedText>
-                    <MaskedText delay={0.6}>
+                    <MaskedText delay={0.4}>
                         <h1>
                             Estate Expertise
                         </h1>
                     </MaskedText>
                 </div>
-                <div className="flex flex-col font-epilogue">
+                <div className="flex flex-col font-epilogue text-sm md:text-md items-center">
                     <MaskedText delay={0.7}>
                         <p >
                             Buy, sell, or invest in Pahrump and Southern Nevada mdma
@@ -76,16 +76,17 @@ export function HeroSection() {
                     </MaskedText>
                 </div>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 font-epilogue text-sm md:text-md">
                 <button type="button"
-                    className="flex items-center text-lg font-epilogue gap-3 py-4 pl-7 pr-6 bg-secondary">
-                    Explore Listing
-                    <ArrowRight size={20} />
+                    className="flex items-center  gap-3 p-[10px_16px] bg-secondary rounded-full ">
+                    Get in Touch
                 </button>
                 <button type="button"
-                    className="flex items-center  text-lg font-epilogue gap-3 py-4 pl-7 pr-6 bg-primary/50 border text-secondary border-secondary backdrop-blur-sm">
-                    Contact Us
-                    <ArrowRight size={20} />
+                    className="flex items-center gap-4 p-[10px_12px_10px_16px] bg-primary/60 text-white backdrop-blur-xs rounded-full">
+                    Explore Listing
+                    <div className="p-2 rounded-full bg-secondary text-primary">
+                        <ArrowUpRight size={16} />
+                    </div>
                 </button>
             </div>
             {/* <div className="flex items-center gap-6">

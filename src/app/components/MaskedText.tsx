@@ -5,15 +5,19 @@ import React from "react";
 export function MaskedText({
   children,
   delay,
+  viewOnce=false,
+  
 }: {
   children: React.ReactNode;
   delay: number;
+  viewOnce?: boolean;
 }) {
   return (
     <div className="overflow-hidden w-fit">
       <motion.div
         initial={{ y: "100%"}}
         whileInView={{ y: "0%"}}
+        { ...(viewOnce && { viewport: { once: true }} )}
         transition={{
           delay,
           duration: 0.6,
