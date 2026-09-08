@@ -48,29 +48,29 @@ export function HeroSection() {
             <div className="flex flex-col gap-3 text-secondary ">
                 <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-5xl md:text-5xl uppercase text-shadow-md">
                     <MaskedText delay={0.4}>
-                        <h1>
+                        <h1 className="text-center">
                             Two Decades of
                         </h1>
                     </MaskedText>
                     <MaskedText delay={0.4}>
-                        <h1 >
+                        <h1  className="text-center">
                             Pahrump Real
                         </h1>
                     </MaskedText>
                     <MaskedText delay={0.4}>
-                        <h1>
+                        <h1 className="text-center">
                             Estate Expertise
                         </h1>
                     </MaskedText>
                 </div>
                 <div className="flex flex-col font-epilogue text-sm md:text-md items-center">
                     <MaskedText delay={0.7}>
-                        <p >
+                        <p className="text-center" >
                             Buy, sell, or invest in Pahrump and Southern Nevada mdma
                         </p>
                     </MaskedText>
                     <MaskedText delay={0.8}>
-                        <p>
+                        <p className="text-center">
                             with Marci Metzger & Group, serving since 1995.
                         </p>
                     </MaskedText>
