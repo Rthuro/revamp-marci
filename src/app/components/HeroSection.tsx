@@ -44,9 +44,9 @@ export function HeroSection() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="heroOverlay absolute inset-0 px-6 pb-12 md:p-6 flex flex-col gap-8 items-center justify-end">
+            className="heroOverlay absolute inset-0 px-6  flex flex-col gap-8 items-center justify-end pb-18">
             <div className="flex flex-col gap-3 text-secondary ">
-                <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-4xl md:text-5xl uppercase text-shadow-md">
+                <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-xl md:text-5xl uppercase text-shadow-md">
                     <MaskedText delay={0.4}>
                         <h1 className="text-center">
                             Two Decades of
