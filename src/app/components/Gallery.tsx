@@ -48,7 +48,7 @@ export function Gallery() {
     }, [emblaApi, onSelect])
 
     return (
-        <section className="w-full h-fit flex flex-col items-center justify-center gap-2 my-12 md:my-24 overflow-visible relative">
+        <section className="w-full h-fit flex flex-col items-center justify-center gap-2 my-12 overflow-visible relative">
             <MaskedText delay={0}>
                 <h2 className="text-4xl font-cormorant font-medium text-primary">
                     Photo Gallery

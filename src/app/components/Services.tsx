@@ -39,7 +39,7 @@ export function Services() {
     }, [currIndex, next])
 
     return (
-        <section className="flex flex-col items-center gap-10 w-full pt-12 pb-16 px-2 md:px-12">
+        <section className="flex flex-col items-center gap-10 w-full pb-16 px-2 md:px-12">
             <MaskedText delay={0}>
                 <h2 className="text-4xl font-cormorant font-medium text-primary">
                     Our Services
