@@ -138,7 +138,7 @@ export function BaitSection() {
                     <div className="flex flex-col gap-2">
                         <label htmlFor="type">Type</label>
                         <select id="type" className={inputClass} >
-                            <option>Type</option>
+                            <option>Any</option>
                             <option value="land">Land</option>
                             <option value="residentiallease">Residential Lease</option>
                             <option value="highrise">High Rise</option>
@@ -176,7 +176,7 @@ export function BaitSection() {
                     <div className="flex flex-col gap-2">
                         <label htmlFor="type">Baths</label>
                         <select id="type" className={inputClass} >
-                            <option>Type</option>
+                            <option>Any Number</option>
                             <option value="1+">1+</option>
                             <option value="2+">2+</option>
                             <option value="3+">3+</option>
