@@ -115,7 +115,11 @@ export function BaitSection() {
             backgroundPosition: 'center',
         }}>
 
-            <div className="flex flex-col gap-3 bg-primary/60 backdrop-blur-sm w-full py-8 px-6 rounded-xl text-secondary">
+            <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="flex flex-col gap-3 bg-primary/60 backdrop-blur-sm w-full py-8 px-6 rounded-xl text-secondary">
                 <p className="text-xl text-white font-epilogue">Let's find your dream home</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
                     <div className="flex flex-col gap-2">
@@ -195,7 +199,8 @@ export function BaitSection() {
                         Search Now
                     </button>
                 </div>
+                </motion.div>
+
             </div>
-        </div>
     </section>
 }

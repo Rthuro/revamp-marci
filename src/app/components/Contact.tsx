@@ -1,6 +1,8 @@
+'use client'
 import { Calendar, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const socials = [
     {
@@ -56,7 +58,11 @@ export function Contact() {
             className="w-fit mx-4 md:mx-0 py-6 md:py-12 px-6 md:px-12 rounded-2xl md:rounded-4xl shadow-xl"
             style={{ backgroundColor: "#FFFBF6" }}
         >
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-16">
+            <motion.div 
+             initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6 md:gap-16">
                 {/* Left Column — Info */}
                 <div className="flex flex-col justify-between gap-8 md:w-1/2">
                     <div className="flex flex-col gap-2">
@@ -236,7 +242,7 @@ export function Contact() {
                     </div>
 
                 
-            </div>
+            </motion.div>
         </section>
     )
 }

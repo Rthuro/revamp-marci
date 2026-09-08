@@ -46,7 +46,11 @@ export function Services() {
                 </h2>
             </MaskedText>
 
-            <div className="flex gap-1 md:gap-3 w-full h-[400px] md:h-[500px]">
+            <motion.div 
+             initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="flex gap-1 md:gap-3 w-full h-[400px] md:h-[500px]">
                 {serviceData.map((service, index) => {
                     const isActive = index === currIndex
                     return (
@@ -73,7 +77,9 @@ export function Services() {
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-secondary flex flex-col gap-2">
                                 <motion.h3
-                                    layout="position"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }} 
+                                    transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
                                     className={`text-2xl @[300px]:text-2xl @[500px]:text-3xl font-cormorant font-medium text-shadow-lg ${isActive ? 'block' : 'hidden md:block'}`}
                                 >
                                     {service.title}
@@ -95,7 +101,7 @@ export function Services() {
                         </motion.div>
                     )
                 })}
-            </div>
+            </motion.div>
         </section>
     )
 }
