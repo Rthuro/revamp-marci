@@ -66,7 +66,7 @@ export function HeroSection() {
                 <div className="flex flex-col font-epilogue text-sm md:text-md items-center">
                     <MaskedText delay={0.7}>
                         <p className="text-center" >
-                            Buy, sell, or invest in Pahrump and Southern Nevada mdma
+                            Buy, sell, or invest in Pahrump and Southern Nevada
                         </p>
                     </MaskedText>
                     <MaskedText delay={0.8}>
