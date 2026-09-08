@@ -46,11 +46,11 @@ export function Services() {
                 </h2>
             </MaskedText>
 
-            <motion.div 
-             initial={{ opacity: 0, y: 30 }}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="flex gap-1 md:gap-3 w-full h-[400px] md:h-[500px]">
+                className="flex gap-1 md:gap-3 w-full h-[400px] md:h-[500px]">
                 {serviceData.map((service, index) => {
                     const isActive = index === currIndex
                     return (
@@ -77,24 +77,50 @@ export function Services() {
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-secondary flex flex-col gap-2">
                                 <motion.h3
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }} 
-                                    transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
-                                    className={`text-2xl @[300px]:text-2xl @[500px]:text-3xl font-cormorant font-medium text-shadow-lg ${isActive ? 'block' : 'hidden md:block'}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: [0.22, 1, 0.36, 1],
+                                    }}
+                                    className={`text-2xl @[300px]:text-2xl @[500px]:text-3xl font-cormorant font-medium text-shadow-lg ${isActive ? 'hidden' : 'hidden md:block'}`}
                                 >
                                     {service.title}
                                 </motion.h3>
-
-                                <AnimatePresence>
+                                <AnimatePresence mode="popLayout">
                                     {isActive && (
-                                        <motion.p
-                                            initial={{ opacity: 0, y: 10 }}
-                                            animate={{ opacity: 1, y: 0 }} 
-                                            transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
-                                            className={`text-sm md:text-lg text-secondary/80 w-full md:w-lg block ${!isActive ? 'hidden' : ''}`}
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="absolute bottom-0 left-0 right-0 p-5 md:p-8 text-secondary flex flex-col gap-2"
                                         >
+                                            <motion.h3
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    ease: [0.22, 1, 0.36, 1],
+                                                }}
+                                                className="text-2xl @[300px]:text-2xl @[500px]:text-3xl font-cormorant font-medium text-shadow-lg"
+                                            >
+                                                {service.title}
+                                            </motion.h3>
+
+                                            <motion.p
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{
+                                                    delay: 0.08,
+                                                    duration: 0.5,
+                                                    ease: [0.22, 1, 0.36, 1],
+                                                }}
+                                                className="text-sm md:text-lg text-secondary/80 w-full md:w-lg"
+                                            >
                                                 {service.description}
                                             </motion.p>
+                                        </motion.div>
                                     )}
                                 </AnimatePresence>
                             </div>
