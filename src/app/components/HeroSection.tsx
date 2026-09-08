@@ -20,7 +20,7 @@ export function HeroSection() {
     const [currImg, setCurrImg] = useState(0)
 
     return <section
-        className="relative w-full flex items-center justify-center h-screen overflow-hidden">
+        className="relative w-full flex items-center justify-center h-[calc(100vh-6rem)] md:h-screen overflow-hidden">
         <motion.div
             animate={{ width: "100%", height: "100%", borderRadius: 0, margin: "0px" }}
             initial={{ width: "0%", height: "0%", borderRadius: 42, margin: "60px" }}
@@ -44,7 +44,7 @@ export function HeroSection() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="heroOverlay absolute inset-0 px-6  flex flex-col gap-8 items-center justify-end pb-24 md:pb-18">
+            className="heroOverlay absolute inset-0 px-6  flex flex-col gap-8 items-center justify-end pb-18">
             <div className="flex flex-col gap-3 text-secondary ">
                 <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-4xl md:text-5xl uppercase text-shadow-md">
                     <MaskedText delay={0.4}>
