@@ -57,8 +57,8 @@ export function Gallery() {
             <motion.div
                 initial={{ width: "100%", padding: "0px" }}
                 whileInView={{ width: "90%", padding: "2rem 0" }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                viewport={{ amount: 0.4 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                viewport={{ amount: 0.2 }}
                 className="w-full flex justify-center relative group"
             >
                 <div className="overflow-hidden w-full cursor-grab active:cursor-grabbing" ref={emblaRef}>

@@ -34,6 +34,22 @@ const featuredListing = [
         sqft: 2456,
         location: "4190 N Equus Court, Pahrump, NV",
         image: list3
+    }, 
+    {
+        cost: 1350000,
+        beds: 3,
+        baths: 3,
+        sqft: 1876,
+        location: "2221 W Windsong Lane, Pahrump, NV",
+        image: list2
+    }, 
+     {
+        cost: 1850000,
+        beds: 3,
+        baths: 3,
+        sqft: 2456,
+        location: "4190 N Equus Court, Pahrump, NV",
+        image: list3
     },
 ]
 
@@ -58,7 +74,7 @@ export function BaitSection() {
             once: true,
             amount: 0.2,
         }}
-        className="flex flex-col gap-8 bg-white px-6 py-12 md:p-12 overflow-hidden origin-left">
+        className="flex flex-col gap-8 bg-white px-6 py-12 md:p-12 overflow-hidden origin-left mt-24">
             <div className="flex items-center gap-2">
                <motion.p
                     initial={{ opacity: 0, x: -40 }}

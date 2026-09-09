@@ -55,7 +55,7 @@ const inputClass = "w-full border-b border-primarylight/30 bg-transparent py-3 t
 export function Contact() {
     return (
         <section
-            className="w-fit mx-4 md:mx-0 py-6 md:py-12 px-6 md:px-12 rounded-2xl md:rounded-4xl shadow-xl"
+            className="w-fit max-w-[95%] mx-auto py-6 md:py-12 px-6 md:px-12 rounded-2xl md:rounded-4xl shadow-xl"
             style={{ backgroundColor: "#FFFBF6" }}
         >
             <motion.div 

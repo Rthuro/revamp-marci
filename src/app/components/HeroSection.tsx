@@ -1,23 +1,10 @@
 'use client'
 import gal1 from "@/app/assets/gellery/1.png"
-import gal2 from "@/app/assets/gellery/2.png"
-import gal3 from "@/app/assets/gellery/3.png"
-import gal4 from "@/app/assets/gellery/4.png"
-import gal5 from "@/app/assets/gellery/5.png"
-import gal6 from "@/app/assets/gellery/6.png"
-import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { MaskedText } from "./MaskedText"
 
-
-const images = [gal1, gal2, gal3, gal4, gal5, gal6]
-
-
 export function HeroSection() {
-
-    const [currImg, setCurrImg] = useState(0)
 
     return <section
         className="relative w-full flex items-center justify-center h-[calc(100vh-6rem)] md:h-screen overflow-hidden">
@@ -25,15 +12,12 @@ export function HeroSection() {
             animate={{ width: "100%", height: "100%", borderRadius: 0, margin: "0px" }}
             initial={{ width: "0%", height: "0%", borderRadius: 42, margin: "60px" }}
             transition={{ duration: 1.8, ease: "easeOut" }}
-            className="w-full h-screen m-auto overflow-hidden">
-            {/* {images.map((image, index) => (
-                    <div key={index}>
-                        <Image src={image} alt="gallery" />
-                    </div>
-                ))} */}
-            <Image src={images[0]} alt="gallery"
-                loading="eager"
-                className="object-cover h-screen w-screen" />
+            className="w-full h-screen m-auto overflow-hidden"
+            style={{
+                backgroundImage: `url(${gal1.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+            }}>
         </motion.div>
         <motion.div
             initial={{ opacity: 0 }}
@@ -44,9 +28,9 @@ export function HeroSection() {
                 duration: 0.6,
                 ease: "easeOut",
             }}
-            className="heroOverlay absolute inset-0 px-6  flex flex-col gap-8 items-center justify-end pb-18">
+            className="bg-primary/40 absolute inset-0 px-6  flex flex-col gap-8 items-center justify-center pt-">
             <div className="flex flex-col gap-3 text-secondary ">
-                <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-4xl md:text-5xl uppercase text-shadow-md">
+                <div className="flex flex-col font-cormorant gap-1 items-center font-semibold text-4xl md:text-5xl lg:text-7xl uppercase text-shadow-md">
                     <MaskedText delay={0.4}>
                         <h1 className="text-center">
                             Two Decades of
@@ -63,7 +47,7 @@ export function HeroSection() {
                         </h1>
                     </MaskedText>
                 </div>
-                <div className="flex flex-col font-epilogue text-sm md:text-md items-center">
+                <div className="flex flex-col font-epilogue text-sm md:text-md  lg:text-lg items-center">
                     <MaskedText delay={0.7}>
                         <p className="text-center" >
                             Buy, sell, or invest in Pahrump and Southern Nevada

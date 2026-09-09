@@ -41,8 +41,8 @@ export function Footer() {
 
         </div>
         <div className="absolute bottom-0 md:bottom-6 left-0 right-0 flex flex-col items-center justifiy-center">
-            <div className="w-full md:w-[80%] p-4 md:py-8 md:px-8 rounded-none md:rounded-3xl flex flex-col items-center justify-center bg-secondary/60 md:backdrop-blur-xs">
-                <Image src={logoBlack} alt="logo" className="md:w-[25%] w-[60%]" />
+            <div className="w-full md:w-fit p-4 md:py-8 md:px-24 rounded-none md:rounded-2xl flex flex-col items-center justify-center bg-secondary/60 md:backdrop-blur-xs">
+                <Image src={logoBlack} alt="logo" className="md:w-[30%] w-[60%]" />
                 <div className="flex gap-12 justify-items-center text-primarylight flex-wrap justify-center mt-8">
                     <div className="flex flex-col items-center md:items-start gap-3">
                         <p className="text-center md:text-left">

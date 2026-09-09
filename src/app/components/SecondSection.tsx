@@ -27,28 +27,33 @@ export function SecondSection() {
                 </MaskedText>
             </div>
 
-            <div className="flex flex-col md:flex-row  gap-18 md:gap-0 items-center justify-around w-full">
+            <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex flex-col md:flex-row  gap-18 md:gap-0 items-center justify-around w-full">
                 <TrustBuilder text="Years of Experience" number={30} />
                 <TrustBuilder text="Clients Helped Annually" number={90} />
                 <TrustBuilder text="Annual Sales" number={28.5} />
-            </div>
+            </motion.div>
         </div>
-        
+
+
+
         <MaskedText delay={0.2} viewOnce={true}>
             <h2 className="text-3xl md:text-4xl font-cormorant font-medium text-primarylight uppercase mt-6">Our Affiliations</h2>
         </MaskedText>
-
         <LogoLoop
-        logos={imageLogos}
-        speed={30}
-        direction="left"
-        logoHeight={80}
-        gap={120}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#F7F2EC"
-        ariaLabel="Our Affiliations"
-      />
+            logos={imageLogos}
+            speed={30}
+            direction="left"
+            logoHeight={80}
+            gap={120}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#F7F2EC"
+            ariaLabel="Our Affiliations"
+        />
     </section>
 }

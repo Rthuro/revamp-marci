@@ -9,7 +9,7 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 const navLinks = [
     { id: 1, name: "Home" },
     { id: 2, name: "Listings" },
-    { id: 3, name: "Let's Move" },
+    { id: 3, name: "Contact Us" },
     { id: 4, name: "About Us" },
 ];
 
@@ -126,7 +126,7 @@ export function Navbar() {
                                 initial="hidden"
                                 animate="visible"
                                 exit="exit"
-                                className="flex flex-col items-center justify-center gap-8 font-epilogue text-3xl"
+                                className="flex flex-col items-center justify-center gap-9 font-epilogue font-medium text-4xl"
                             >
                                 {navLinks.map((navLink) => (
                                     <motion.li

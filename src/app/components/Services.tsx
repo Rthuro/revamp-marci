@@ -50,7 +50,7 @@ export function Services() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className="flex gap-1 md:gap-3 w-full h-[400px] md:h-[500px]">
+                className="flex gap-1 md:gap-3 w-[95%] md:w-[80%]  mx-auto h-[400px] md:h-[500px]">
                 {serviceData.map((service, index) => {
                     const isActive = index === currIndex
                     return (
